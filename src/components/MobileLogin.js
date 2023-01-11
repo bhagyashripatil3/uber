@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { Button } from 'react-bootstrap'
@@ -12,7 +12,7 @@ export default function MobileLogin() {
             setIsDisabled(false)
         }
     }, [value])
-    
+
     return (
         <div className='row mx-5 my-5 align-items-center'>
             <PhoneInput
@@ -23,6 +23,7 @@ export default function MobileLogin() {
             <Button
                 variant='dark'
                 className="my-3"
+                onClick={() => window.location.href = "/home"}
                 disabled={isDisabled}>Continue</Button>
         </div>
 
